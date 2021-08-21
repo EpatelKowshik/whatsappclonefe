@@ -16,15 +16,19 @@ export default function Login({ onIdSubmit }) {
   }
 
   return (
-    <Container className="align-items-center d-flex" style={{ height: '100vh' }}>
-      <Form onSubmit={handleSubmit} className="w-100">
-        <Form.Group>
-          <Form.Label>Enter Your Id</Form.Label>
-          <Form.Control type="text" ref={idRef} required />
-        </Form.Group>   
-        <Button type="submit" className="mr-2">Login</Button>
-        <Button onClick={createNewId} variant="secondary">Create A New Id</Button>
-      </Form>
+    <Container className="align-items-center d-flex" style={{ height: '80vh',backgroundImage: `url(https://images.pexels.com/photos/3571094/pexels-photo-3571094.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200)` }}>
+        <Card style={{width:"25rem"}}>
+            <Card.Body>
+                <Form onSubmit={handleSubmit} className="w-100">
+                    <Form.Group>
+                        <Form.Label><Card.Title>Enter Your Id</Card.Title></Form.Label>
+                        <Form.Control type="text" ref={idRef} required/>
+                    </Form.Group>   
+                    <Button type="submit" className="m-2">Login</Button>
+                    <Button onClick={createNewId} variant="secondary" className="m-2">Create A New Id</Button>
+                </Form>
+            </Card.Body>
+        </Card>
     </Container>
   )
 }
