@@ -11,7 +11,7 @@ import NewConversationModal from './NewConversationModal'
 const CONVERSATIONS_KEY = 'conversations'
 const CONTACTS_KEY = 'contacts'
 
-//Avatar, import DonutLargeIcon from '@material-ui/icons/DonutLarge'
+//, import DonutLargeIcon from '@material-ui/icons/DonutLarge'
 //import MoreVertIcon from '@material-ui/icons/MoreVert'
 //import  {SearchOutlined}  from '@material-ui/icons'
 
@@ -23,6 +23,10 @@ export default function Sidebar({ id }) {
   
   function closeModal() {
     setModalOpen(false)
+  }
+
+  function handleIdClick(){
+    navigator.clipboard.writeText(id)
   }
 
   return (
@@ -52,7 +56,7 @@ export default function Sidebar({ id }) {
             <Contacts />
           </Tab.Pane>
         </Tab.Content>
-        <div className="p-2 border-top border-right small">
+        <div className="p-2 border-top border-right small" onClick={handleIdClick}>
           Your Id: <span className="text-muted">{id}</span>
         </div>
         <Button onClick={() => setModalOpen(true)} className="rounded-0">
