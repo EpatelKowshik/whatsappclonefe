@@ -16,7 +16,7 @@ export default function Conversations() {
           active={conversation.selected}
           style={{display:"flex"}}
         >
-          <Avatar/> {conversation.recipients.map(r => r.name).join(', ')}
+          <Avatar className="mx-2"/> {conversation.recipients.map(r => r.name).join(', ')}
         </ListGroup.Item>
       ))}
     </ListGroup>

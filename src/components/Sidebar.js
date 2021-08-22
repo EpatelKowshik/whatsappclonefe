@@ -57,7 +57,7 @@ export default function Sidebar({ id }) {
           </Tab.Pane>
         </Tab.Content>
         <div className="p-2 border-top border-right small" onClick={handleIdClick}>
-          Your Id: <span className="text-muted">{id}</span>
+          Your Id (click to copy): <span className="text-muted">{id}</span>
         </div>
         <Button onClick={() => setModalOpen(true)} className="rounded-0">
           New {conversationsOpen ? 'Conversation' : 'Contact'}

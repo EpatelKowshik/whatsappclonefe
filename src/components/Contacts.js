@@ -9,8 +9,8 @@ export default function Contacts() {
   return (
     <ListGroup variant="flush">
       {contacts.map(contact => (
-        <ListGroup.Item key={contact.id}>
-          <Avatar/> {contact.name}
+        <ListGroup.Item key={contact.id} style={{display:"flex"}}>
+          <Avatar className="mx-2" /> {contact.name}
         </ListGroup.Item>
       ))}
     </ListGroup>
