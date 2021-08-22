@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import { Tab, Nav, Button, Modal } from 'react-bootstrap'
-import {Avatar,IconButton} from '@material-ui/core'
-import DonutLargeIcon from '@material-ui/icons/DonutLarge'
+import {IconButton} from '@material-ui/core'
 import Chat from '@material-ui/icons/Chat'
 import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import MoreVertIcon from '@material-ui/icons/MoreVert'
-import  {SearchOutlined}  from '@material-ui/icons'
 import Conversations from './Conversations'
 import Contacts from './Contacts'
 import NewContactModal from './NewContactModal'
@@ -13,6 +10,11 @@ import NewConversationModal from './NewConversationModal'
 
 const CONVERSATIONS_KEY = 'conversations'
 const CONTACTS_KEY = 'contacts'
+
+//Avatar, import DonutLargeIcon from '@material-ui/icons/DonutLarge'
+//import MoreVertIcon from '@material-ui/icons/MoreVert'
+//import  {SearchOutlined}  from '@material-ui/icons'
+
 
 export default function Sidebar({ id }) {
   const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY)
