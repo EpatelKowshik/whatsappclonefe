@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import { Tab, Nav, Button, Modal } from 'react-bootstrap'
+import {Avatar,IconButton} from '@material-ui/core'
+import DonutLargeIcon from '@material-ui/icons/DonutLarge'
+import Chat from '@material-ui/icons/Chat'
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import MoreVertIcon from '@material-ui/icons/MoreVert'
+import  {SearchOutlined}  from '@material-ui/icons'
 import Conversations from './Conversations'
 import Contacts from './Contacts'
 import NewContactModal from './NewContactModal'
@@ -22,10 +28,18 @@ export default function Sidebar({ id }) {
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
         <Nav variant="tabs" className="justify-content-center">
           <Nav.Item>
-            <Nav.Link eventKey={CONVERSATIONS_KEY}>Conversations</Nav.Link>
+            <Nav.Link eventKey={CONVERSATIONS_KEY}>
+              <IconButton>
+                <Chat/>
+              </IconButton>
+            </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
+            <Nav.Link eventKey={CONTACTS_KEY}>
+              <IconButton>
+                <ContactPhoneIcon/>
+              </IconButton>
+            </Nav.Link>
           </Nav.Item>
         </Nav>
         <Tab.Content className="border-right overflow-auto flex-grow-1">

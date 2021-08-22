@@ -15,8 +15,8 @@ export default function Dashboard({ id }) {
           MessagingApp
         </Navbar.Brand>
         <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="#">Home</Nav.Link>
+            <Nav.Link href="#">Logout</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
