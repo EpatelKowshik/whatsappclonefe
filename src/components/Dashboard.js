@@ -20,7 +20,7 @@ export default function Dashboard({ id }) {
         </Nav>
       </Container>
     </Navbar>
-    <div className="d-flex" style={{ height: '100vh' }}>
+    <div className="d-flex" style={{ height: '90vh' }}>
       <Sidebar id={id} />
       {selectedConversation && <OpenConversation />}
     </div>
